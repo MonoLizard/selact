@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Selact from './component/Selact';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const selactData = [
+		{label: 'Apple', value: 'apple', icon: 'icons/apple.png'},
+		{label: 'Banana', value: 'banana', icon: './icons/banana.png'},
+		{label: 'Dragon Fruit', value: 'dragonfruit', icon: './icons/dragon-fruit.png'},
+		{label: 'Mango', value: 'mango', icon: './icons/mango.png'},
+		{label: 'Orange', value: 'orange', icon: './icons/orange.png'},
+		{label: 'Pear', value: 'pear', icon: './icons/pear.png'},
+		{label: 'Pineapple', value: 'pineapple', icon: './icons/pineapple.png'}
+	];
+
+	return (
+		<div className="App">
+			<Selact placeholder={'Choose a Fruit:'} data={selactData}></Selact>
+		</div>
+	);
 }
 
 export default App;
